@@ -6,7 +6,10 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import Pages from 'vite-plugin-pages'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+// Icon
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import UnoCSS from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,8 +20,12 @@ export default defineConfig({
     Pages(),
     // 自动引入组件
     Components({
-      resolvers: [ElementPlusResolver()]
+      resolvers: [IconsResolver({ prefix: 'i' })]
     }),
+    Icons({
+      autoInstall: true
+    }),
+    UnoCSS(),
     // 自动引入核心库
     AutoImport({
       // targets to transform

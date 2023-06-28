@@ -12,6 +12,9 @@ declare module 'vue' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Hellowrold: typeof import('./src/components/hellowrold.vue')['default']
     HelloWrold: typeof import('./src/components/HelloWrold.vue')['default']
+    ICarbonAccessibility: typeof import('~icons/carbon/accessibility')['default']
+    IconMdiAccountBox: typeof import('~icons/mdi/account-box')['default']
+    IMdiAccountBox: typeof import('~icons/mdi/account-box')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
