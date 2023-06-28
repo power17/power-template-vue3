@@ -14,7 +14,9 @@ declare module 'vue' {
     HelloWrold: typeof import('./src/components/HelloWrold.vue')['default']
     ICarbonAccessibility: typeof import('~icons/carbon/accessibility')['default']
     IconMdiAccountBox: typeof import('~icons/mdi/account-box')['default']
+    IMdiAccount: typeof import('~icons/mdi/account')['default']
     IMdiAccountBox: typeof import('~icons/mdi/account-box')['default']
+    IMidAccount: typeof import('~icons/mi/d-account')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

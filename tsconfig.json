@@ -11,6 +11,4 @@
       "path": "./tsconfig.vitest.json"
     }
   ],
-  "compilerOptions": {
-  }
 }
