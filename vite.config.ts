@@ -16,7 +16,14 @@ import { viteMockServe } from 'vite-plugin-mock'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      script: {
+        // 开启defineModel，3.3实验特性
+        defineModel: true,
+        // 开启解构props
+        propsDestructure: true
+      }
+    }),
     vueJsx(),
     // 自动化路由
     Pages(),
