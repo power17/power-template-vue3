@@ -5,8 +5,6 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
-  const [alias]: typeof import('[package-name]')['[from]']
-  const [import-names]: typeof import('[package-name]')['[import-names]']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const axios: typeof import('axios')['default']
