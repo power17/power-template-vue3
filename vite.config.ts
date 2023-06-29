@@ -11,6 +11,7 @@ import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import UnoCSS from 'unocss/vite'
 import Layouts from 'vite-plugin-vue-layouts'
+import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -32,6 +33,11 @@ export default defineConfig({
       autoInstall: true
     }),
     UnoCSS(),
+    // mock
+    viteMockServe({
+      mockPath: 'mock',
+      enable: false
+    }),
     // 自动引入核心库
     AutoImport({
       // targets to transform
@@ -53,11 +59,6 @@ export default defineConfig({
           axios: [
             // default imports
             ['default', 'axios'] // import { default as axios } from 'axios',
-          ],
-          '[package-name]': [
-            '[import-names]',
-            // alias
-            ['[from]', '[alias]']
           ]
         },
         // example type import
